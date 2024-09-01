@@ -45,9 +45,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		ED5A912E2C84C2A000C976C9 /* ObjcEncodingParser.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ObjcEncodingParser.xcodeproj; sourceTree = "<group>"; };
 		ED70910A2C8389ED0056D465 /* ObjcRuntimeClassDump.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjcRuntimeClassDump.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED7091252C838B4F0056D465 /* ObjcEncodingParser.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ObjcEncodingParser.xcodeproj; sourceTree = "<group>"; };
 		ED7091532C839EDC0056D465 /* ObjcClassDumpExample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ObjcClassDumpExample; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDA8C1C62C84C2B500994E4B /* ObjcEncodingParser.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ObjcEncodingParser.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -99,6 +101,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED5A91352C84C2A000C976C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		ED7091002C8389ED0056D465 = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +139,13 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EDA8C1D12C84C2B500994E4B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +241,14 @@
 				{
 					ProductGroup = ED70912C2C838B4F0056D465 /* Products */;
 					ProjectRef = ED7091252C838B4F0056D465 /* ObjcEncodingParser.xcodeproj */;
+				},
+				{
+					ProductGroup = EDA8C1D12C84C2B500994E4B /* Products */;
+					ProjectRef = EDA8C1C62C84C2B500994E4B /* ObjcEncodingParser.xcodeproj */;
+				},
+				{
+					ProductGroup = ED5A91352C84C2A000C976C9 /* Products */;
+					ProjectRef = ED5A912E2C84C2A000C976C9 /* ObjcEncodingParser.xcodeproj */;
 				},
 			);
 			projectRoot = "";

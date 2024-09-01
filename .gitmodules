@@ -1,0 +1,3 @@
+[submodule "ObjcRuntimeClassDump/objc-encodingparser"]
+	path = ObjcRuntimeClassDump/objc-encodingparser
+	url = https://github.com/unixzii/objc-encodingparser.git
