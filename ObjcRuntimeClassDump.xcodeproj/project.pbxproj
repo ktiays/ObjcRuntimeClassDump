@@ -6,14 +6,58 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		ED70915B2C839EE60056D465 /* ObjcRuntimeClassDump.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED70910A2C8389ED0056D465 /* ObjcRuntimeClassDump.framework */; };
+		ED70915C2C839EE60056D465 /* ObjcRuntimeClassDump.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED70910A2C8389ED0056D465 /* ObjcRuntimeClassDump.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ED70915D2C839EE60056D465 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED7091012C8389ED0056D465 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED7091092C8389ED0056D465;
+			remoteInfo = ObjcRuntimeClassDump;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ED7091512C839EDC0056D465 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		ED70915F2C839EE60056D465 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				ED70915C2C839EE60056D465 /* ObjcRuntimeClassDump.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		ED70910A2C8389ED0056D465 /* ObjcRuntimeClassDump.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjcRuntimeClassDump.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED7091252C838B4F0056D465 /* ObjcEncodingParser.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ObjcEncodingParser.xcodeproj; sourceTree = "<group>"; };
+		ED7091532C839EDC0056D465 /* ObjcClassDumpExample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ObjcClassDumpExample; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
 		ED70910F2C8389ED0056D465 /* Exceptions for "ObjcRuntimeClassDump" folder in "ObjcRuntimeClassDump" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"objc-encodingparser/run-test.c",
+			);
 			publicHeaders = (
+				objc_dump_class.h,
 				ObjcRuntimeClassDump.h,
 			);
 			target = ED7091092C8389ED0056D465 /* ObjcRuntimeClassDump */;
@@ -29,6 +73,11 @@
 			path = ObjcRuntimeClassDump;
 			sourceTree = "<group>";
 		};
+		ED7091542C839EDC0056D465 /* ObjcClassDumpExample */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ObjcClassDumpExample;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +88,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ED7091502C839EDC0056D465 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED70915B2C839EE60056D465 /* ObjcRuntimeClassDump.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -46,6 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				ED70910C2C8389ED0056D465 /* ObjcRuntimeClassDump */,
+				ED7091542C839EDC0056D465 /* ObjcClassDumpExample */,
+				ED70915A2C839EE60056D465 /* Frameworks */,
 				ED70910B2C8389ED0056D465 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,8 +113,23 @@
 			isa = PBXGroup;
 			children = (
 				ED70910A2C8389ED0056D465 /* ObjcRuntimeClassDump.framework */,
+				ED7091532C839EDC0056D465 /* ObjcClassDumpExample */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		ED70912C2C838B4F0056D465 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED70915A2C839EE60056D465 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,6 +168,30 @@
 			productReference = ED70910A2C8389ED0056D465 /* ObjcRuntimeClassDump.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		ED7091522C839EDC0056D465 /* ObjcClassDumpExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED7091572C839EDC0056D465 /* Build configuration list for PBXNativeTarget "ObjcClassDumpExample" */;
+			buildPhases = (
+				ED70914F2C839EDC0056D465 /* Sources */,
+				ED7091502C839EDC0056D465 /* Frameworks */,
+				ED7091512C839EDC0056D465 /* CopyFiles */,
+				ED70915F2C839EE60056D465 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED70915E2C839EE60056D465 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				ED7091542C839EDC0056D465 /* ObjcClassDumpExample */,
+			);
+			name = ObjcClassDumpExample;
+			packageProductDependencies = (
+			);
+			productName = ObjcClassDumpExample;
+			productReference = ED7091532C839EDC0056D465 /* ObjcClassDumpExample */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -104,6 +202,9 @@
 				LastUpgradeCheck = 1610;
 				TargetAttributes = {
 					ED7091092C8389ED0056D465 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					ED7091522C839EDC0056D465 = {
 						CreatedOnToolsVersion = 16.1;
 					};
 				};
@@ -120,9 +221,16 @@
 			preferredProjectObjectVersion = 77;
 			productRefGroup = ED70910B2C8389ED0056D465 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = ED70912C2C838B4F0056D465 /* Products */;
+					ProjectRef = ED7091252C838B4F0056D465 /* ObjcEncodingParser.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				ED7091092C8389ED0056D465 /* ObjcRuntimeClassDump */,
+				ED7091522C839EDC0056D465 /* ObjcClassDumpExample */,
 			);
 		};
 /* End PBXProject section */
@@ -145,12 +253,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ED70914F2C839EDC0056D465 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ED70915E2C839EE60056D465 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED7091092C8389ED0056D465 /* ObjcRuntimeClassDump */;
+			targetProxy = ED70915D2C839EE60056D465 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		ED7091112C8389ED0056D465 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					arm64e,
+				);
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -168,6 +295,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
@@ -181,6 +309,10 @@
 		ED7091122C8389ED0056D465 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					arm64e,
+				);
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -198,6 +330,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
@@ -329,6 +462,26 @@
 			};
 			name = Release;
 		};
+		ED7091582C839EDC0056D465 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V8K4KDZ2JN;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ED7091592C839EDC0056D465 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V8K4KDZ2JN;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -346,6 +499,15 @@
 			buildConfigurations = (
 				ED7091112C8389ED0056D465 /* Debug */,
 				ED7091122C8389ED0056D465 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED7091572C839EDC0056D465 /* Build configuration list for PBXNativeTarget "ObjcClassDumpExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED7091582C839EDC0056D465 /* Debug */,
+				ED7091592C839EDC0056D465 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
