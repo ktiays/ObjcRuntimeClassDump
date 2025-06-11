@@ -328,8 +328,11 @@ static std::string method_codable_definition(Method method) {
     const auto types = state.codable_types();
     const auto types_count = types.size();
 
+    if (types_count < 1) {
+        return selector;
+    }
+    
     std::stringstream ss;
-    assert(types_count >= 1);
     // The first type is the return type.
     ss << std::format("({})", types.front());
     // First two arguments in Objective-C are self and _cmd.
