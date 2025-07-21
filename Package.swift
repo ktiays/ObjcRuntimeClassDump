@@ -8,7 +8,7 @@ let package = Package(
     name: "ObjcRuntimeClassDump",
     platforms: [
         .iOS(.v17),
-        .macOS(.v10_15),
+        .macOS(.v14),
     ],
     products: [
         .library(
